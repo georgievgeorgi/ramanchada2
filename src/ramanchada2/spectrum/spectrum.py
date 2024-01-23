@@ -10,7 +10,7 @@ import numpy as np
 import numpy.typing as npt
 import pydantic
 from scipy.signal import convolve, savgol_coeffs, savgol_filter
-from scipy.stats import rv_histogram, median_abs_deviation
+from scipy.stats import median_abs_deviation, rv_histogram
 
 from ramanchada2.io.HSDS import write_cha
 from ramanchada2.io.output.write_csv import write_csv as io_write_csv

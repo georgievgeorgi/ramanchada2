@@ -9,7 +9,7 @@ from ..spectrum import Spectrum
 
 @add_spectrum_filter
 @validate_arguments(config=dict(arbitrary_types_allowed=True))
-def drop_spikes(old_spe: Spectrum,
+def drop_spikes_deprecated(old_spe: Spectrum,
                 new_spe: Spectrum, /,
                 n_sigma: PositiveFloat = 10):
     """
@@ -32,7 +32,7 @@ def drop_spikes(old_spe: Spectrum,
 
 @add_spectrum_filter
 @validate_arguments(config=dict(arbitrary_types_allowed=True))
-def recover_spikes(old_spe: Spectrum,
+def recover_spikes_deprecated(old_spe: Spectrum,
                    new_spe: Spectrum, /,
                    n_sigma: PositiveFloat = 10):
     """
@@ -54,7 +54,7 @@ def recover_spikes(old_spe: Spectrum,
 
 @add_spectrum_filter
 @validate_arguments(config=dict(arbitrary_types_allowed=True))
-def get_spikes(old_spe: Spectrum,
+def get_spikes_deprecated(old_spe: Spectrum,
                new_spe: Spectrum, /,
                n_sigma: PositiveFloat = 10):
     """
