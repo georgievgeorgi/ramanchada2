@@ -4,7 +4,7 @@ from typing import List
 import numpy as np
 from pydantic import validate_arguments, confloat, PositiveInt
 from scipy import signal, fft
-import pyhht
+# import pyhht
 
 from ramanchada2.misc.spectrum_deco import add_spectrum_filter
 from ..spectrum import Spectrum
@@ -35,6 +35,7 @@ def derivative_sharpening(old_spe: Spectrum,
     new_spe.y = y0 - y2/sig_width**2*der2_factor + y4/sig_width**4*der4_factor
 
 
+"""
 @add_spectrum_filter
 @validate_arguments(config=dict(arbitrary_types_allowed=True))
 def hht_sharpening(old_spe: Spectrum,
@@ -53,6 +54,7 @@ def hht_sharpening(old_spe: Spectrum,
     new_spe.y = np.pad(ynew, 1)
     new_spe.y = new_spe.subtract_moving_minimum(movmin).normalize().y  # type: ignore
     new_spe.y = new_spe.y * old_spe.y.max() + old_spe.y.min()
+"""
 
 
 @add_spectrum_filter
